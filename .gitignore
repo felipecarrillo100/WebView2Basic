@@ -1,0 +1,55 @@
+# Visual Studio generated files
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+x64/
+x86/
+build/
+cmake-build-*/
+Debug/
+Release/
+DebugPublic/
+ReleasePublic/
+
+# Visual Studio Code settings (if any)
+.vscode/
+
+# NuGet Packages
+*.nupkg
+packages/
+.nuget/
+
+# WebView2 SDK files (NuGet will restore these, no need to track)
+Microsoft.Web.WebView2/
+
+# CMake files (if you use CMake)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# Others
+*.DS_Store
+*.obj
+*.pdb
+*.idb
+*.ipdb
+*.iobj
+*.ilk
+
+# If you have any generated code or intermediate files, exclude them too
+generated/
