@@ -19,7 +19,9 @@ The application opens a native window and displays a local or remote web app usi
 
 ## 📦 Dependencies
 
-- [Microsoft.Web.WebView2 NuGet Package](https://www.nuget.org/packages/Microsoft.Web.WebView2)
+- [WebView2 SDK](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+- [nlohmann/json](https://github.com/nlohmann/json) for JSON parsing
+- [Windows Implementation Library (WIL)](https://github.com/microsoft/wil) for COM helpers
 
 ---
 
@@ -28,13 +30,13 @@ The application opens a native window and displays a local or remote web app usi
 1. **Clone this repo:**
 
    ```bash
-   git clone https://github.com/yourusername/WebView2Sample.git
-   cd WebView2Sample
+   git clone https://github.com/felipecarrillo100/WebView2Basic.git
+   cd WebView2Basic
    ```
 
 2. **Open the solution in Visual Studio 2022:**
 
-   - Open `WebView2Sample.sln`
+   - Open `WebView2Basic.sln`
 
 3. **Restore NuGet packages:**
 
@@ -66,11 +68,14 @@ g_webViewWindow->Navigate(L"http://localhost:8080/home/");
 ## 📂 Project Structure
 
 ```
-/WebView2Sample
-├── WebView2Sample.sln         # Visual Studio Solution
-├── main.cpp                   # Main source file
-├── .gitignore
-└── README.md
+WebView2Basic/            # Root folder
+├── WebView2Basic.sln     # Visual Studio solution file
+├── README.md             # This file
+└── WebView2Basic/        # Source code folder
+    ├── WebView2Basic.cpp
+    ├── WebView2Basic.h
+    ├── WebView2Basic.vcxproj
+    └── packages.config
 ```
 
 ---
@@ -79,7 +84,7 @@ g_webViewWindow->Navigate(L"http://localhost:8080/home/");
 
 - The app uses `ComPtr` from WRL instead of WIL to minimize dependencies.
 - Tested on Windows 11 and Visual Studio 2022 (v17.x).
-- The WebView2 SDK is installed via NuGet and automatically linked.
+- The WebView2 SDK, WIL and nlohmann/json are installed via NuGet and automatically linked.
 
 ---
 
